@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <style>
+
+        .leaflet-arrow-icon {
+            background: #fff;
+            border: 1px solid #666;
+            text-align: center;
+            line-height: 12px;
+            font-size: 8px;
+        }
+        .leaflet-arrow-icon:not(.plus) {
+
+            width: 16px !important;
+            height: 16px !important;
+            margin-left: -8px !important;
+            margin-top: -8px !important;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .leaflet-arrow-icon.rounded{
+            border-radius:10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+        .leaflet-arrow-icon.rounded.plus::before,
+        .leaflet-arrow-icon.rounded.plus::after{
+            background: #666;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: '';
+            display: inline-block;
+        }
+
+        .leaflet-arrow-icon.rounded.plus::after{
+            width: 2px;
+            margin-left: -1px;
+            height: 80%;
+            margin-top: -40%;
+        }
+        .leaflet-arrow-icon.rounded.plus::before{
+            width:80%;
+            height:2px;
+            margin-top: -1px;
+            margin-left: -40%;
+        }
+    </style>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="js/leaflet.arrow.js"></script>
+    <script src="js/plotter.js"></script>
+    <script src="js/main.js"> </script>
+</head>
+<body onload="init()">
+<button id="new">create</button>
+<button id="remove">remove</button>
+<button id="edit">toggle edit</button>
+<button id="coords">get coords</button>
+<div id="map" style="width: 100%;height: 400px;"></div>
+<div id="temp"></div>
+</body>
+</html>
